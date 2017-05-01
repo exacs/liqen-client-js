@@ -1,0 +1,43 @@
+{
+  "name": "liqen",
+  "version": "0.0.0",
+  "description": "JS Client for Liqen Core API",
+  "main": "dist/liqen-api-client.js",
+  "module": "src/index.js",
+  "scripts": {
+    "test": "eslint src",
+    "build": "webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/exacs/liqen-client-js.git"
+  },
+  "keywords": [
+    "api",
+    "client",
+    "liqen"
+  ],
+  "contributors": [
+    "Carlos Saito <carlos@saito.style> (http://saito.style)",
+    "Cristian Hernandez <hi@crishernandez.co> (http://crishernandez.co)"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/exacs/liqen-client-js/issues"
+  },
+  "homepage": "https://github.com/exacs/liqen-client-js#readme",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-node": "^4.2.2",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "webpack": "^2.4.1"
+  },
+  "dependencies": {
+    "babel-preset-env": "^1.4.0"
+  }
+}
