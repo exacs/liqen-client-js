@@ -6,6 +6,8 @@
   "module": "src/index.js",
   "scripts": {
     "test": "eslint src",
+    "prepublish": "npm run build",
+    "prepare": "npm run build",
     "build": "webpack -p"
   },
   "repository": {
