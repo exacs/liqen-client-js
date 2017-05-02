@@ -4,6 +4,10 @@
   "description": "JS Client for Liqen Core API",
   "main": "dist/liqen-api-client.js",
   "module": "src/index.js",
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
     "test": "eslint src",
     "prepublish": "npm run build",
