@@ -9,6 +9,15 @@ module.exports = {
     libraryTarget: 'umd'
   },
 
+  externals: {
+    'isomorphic-fetch': {
+      commonjs: 'isomorphic-fetch',
+      commonjs2: 'isomorphic-fetch',
+      amd: 'isomorphic-fetch',
+      root: 'fetch'
+    }
+  },
+
   module: {
     rules: [
       {
