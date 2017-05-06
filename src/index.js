@@ -15,7 +15,9 @@ function createClient (token, options = DEFAULT_OPTIONS) {
   const r = resourceFactory(options.apiURI, headers)
 
   return {
-    annotations: r('annotations')
+    annotations: r('annotations'),
+    users: r('users'),
+    sessions: r('sessions')
   }
 }
 
