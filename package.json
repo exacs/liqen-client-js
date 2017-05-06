@@ -12,7 +12,8 @@
     "test": "eslint src",
     "prepublish": "npm run build",
     "prepare": "npm run build",
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "start": "babel-node --presets env test.js"
   },
   "repository": {
     "type": "git",
