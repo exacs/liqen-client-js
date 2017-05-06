@@ -1,4 +1,3 @@
-import fetch from 'isomorphic-fetch'
 import resourceFactory from './resource-factory'
 
 // Default options related to the API
