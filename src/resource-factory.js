@@ -9,7 +9,7 @@ import fetch from 'isomorphic-fetch'
 
 // Performs the API call
 function fetchJSON (endpoint, method, body, headers) {
-  return fetch(endpoint, { method, headers, body: JSON.stringify(body) })
+  return fetch(endpoint, { method, headers, mode: 'no-cors', body: JSON.stringify(body) })
     .catch(() => { throw new ConnectionError() })
     .then(parseJSON)
     .then(checkResponseErrors)
