@@ -5,7 +5,7 @@ import { APIError,
          ConnectionError,
          InvalidRequestError,
          ErrorCodes as EC } from './errors'
-import fetch from 'isomorphic-fetch'
+import fetch from 'node-fetch'
 
 // Performs the API call
 function fetchJSON (endpoint, method, body, headers) {
