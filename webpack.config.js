@@ -5,7 +5,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'liqen-api-client.js',
-    library: 'liqenClient',
+    library: 'liqen',
     libraryTarget: 'umd'
   },
 
