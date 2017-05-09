@@ -3,8 +3,9 @@
   "version": "0.3.2",
   "description": "JS Client for Liqen Core API",
   "main": "dist/liqen-api-client.js",
-  "module": "src/index.js",
+  "module": "lib/index.js",
   "files": [
+    "lib",
     "dist",
     "src"
   ],
@@ -12,7 +13,9 @@
     "test": "eslint src",
     "prepublish": "npm run build",
     "prepare": "npm run build",
-    "build": "webpack -p",
+    "build": "npm run build:lib && npm run build:dist",
+    "build:lib" : "babel --presets env src -d lib",
+    "build:dist": "webpack -p",
     "start": "babel-node --presets env test.js"
   },
   "repository": {
