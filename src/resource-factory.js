@@ -48,7 +48,9 @@ function parseJSON (response) {
     .json()
     .then(json => Object.assign(response, {json}))
     .catch(() => {
-      throw new APIError(EC.UNPROCESSABLE_JSON)
+      throw new APIError({
+        code: EC.UNPROCESSABLE_JSON
+      })
     })
 }
 
