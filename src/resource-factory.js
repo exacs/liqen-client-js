@@ -5,11 +5,11 @@ import { APIError,
          ConnectionError,
          InvalidRequestError,
          ErrorCodes as EC } from './errors'
-import fetch from 'isomorphic-fetch'
+import fetch from 'node-fetch'
 
 // Performs the API call
 function fetchJSON (endpoint, method, body, headers) {
-  return fetch(endpoint, { method, headers, mode: 'no-cors', body: JSON.stringify(body) })
+  return fetch(endpoint, { method, headers, body: JSON.stringify(body) })
     .catch(() => { throw new ConnectionError() })
     .then(parseJSON)
     .then(checkResponseErrors)
@@ -48,7 +48,9 @@ function parseJSON (response) {
     .json()
     .then(json => Object.assign(response, {json}))
     .catch(() => {
-      throw new APIError(EC.UNPROCESSABLE_JSON)
+      throw new APIError({
+        code: EC.UNPROCESSABLE_JSON
+      })
     })
 }
 
