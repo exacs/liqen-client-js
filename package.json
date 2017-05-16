@@ -15,8 +15,7 @@
     "prepare": "npm run build",
     "build": "npm run build:lib && npm run build:dist",
     "build:lib": "babel --presets env src -d lib",
-    "build:dist": "webpack -p",
-    "start": "babel-node --presets env test.js"
+    "build:dist": "webpack -p"
   },
   "repository": {
     "type": "git",
