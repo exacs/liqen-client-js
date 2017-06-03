@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/exacs/liqen-client-js.git"
+    "url": "git+https://github.com/CommonActionForum/liqen-client-js.git"
   },
   "keywords": [
     "api",
@@ -32,9 +32,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/exacs/liqen-client-js/issues"
+    "url": "https://github.com/CommonActionForum/liqen-client-js/issues"
   },
-  "homepage": "https://github.com/exacs/liqen-client-js#readme",
+  "homepage": "https://github.com/CommonActionForum/liqen-client-js#readme",
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
