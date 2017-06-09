@@ -16,6 +16,7 @@ function createClient (token, options = DEFAULT_OPTIONS) {
 
   return {
     annotations: r('annotations'),
+    tags: r('tags'),
     articles: r('articles'),
     users: r('users'),
     sessions: r('sessions')
