@@ -1,4 +1,4 @@
-import url from 'url'
+import url, { URL, URLSearchParams } from 'url'
 import { APIError,
          AuthenticationError,
          ClientError,
@@ -56,7 +56,9 @@ function parseJSON (response) {
 
 const resourceFactory = (apiURI, headers) => name => ({
   index (params) {
-    return fetchJSON(url.resolve(apiURI, name), 'get', params, headers)
+    const endpoint = new URL(name, apiURI)
+    endpoint.search = new URLSearchParams(params)
+    return fetchJSON(endpoint.href, 'get', {}, headers)
   },
 
   show (id) {
