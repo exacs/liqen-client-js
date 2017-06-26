@@ -55,7 +55,7 @@ function parseJSON (response) {
 }
 
 const resourceFactory = (apiURI, headers) => name => ({
-  index (params) {
+  index (params = {}) {
     var esc = encodeURIComponent
     var query = Object
       .keys(params)
