@@ -1,6 +1,6 @@
 {
   "name": "liqen",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "JS Client for Liqen Core API",
   "main": "dist/liqen-api-client.js",
   "module": "lib/index.js",
