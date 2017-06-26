@@ -9,7 +9,11 @@ import fetch from 'isomorphic-fetch'
 
 // Performs the API call
 function fetchJSON (endpoint, method, body, headers) {
-  return fetch(endpoint, { method, headers, body: JSON.stringify(body) })
+  return fetch(endpoint, {
+    method,
+    headers,
+    body: body ? JSON.stringify(body) : undefined
+  })
     .catch(() => { throw new ConnectionError() })
     .then(parseJSON)
     .then(checkResponseErrors)
@@ -62,11 +66,11 @@ const resourceFactory = (apiURI, headers) => name => ({
       .map(k => esc(k) + '=' + esc(params[k]))
       .join('&')
 
-    return fetchJSON(url.resolve(apiURI, name) + '?' + query, 'get', {}, headers)
+    return fetchJSON(url.resolve(apiURI, name) + '?' + query, 'get', undefined, headers)
   },
 
   show (id) {
-    return fetchJSON(url.resolve(apiURI, name + '/' + id), 'get', {}, headers)
+    return fetchJSON(url.resolve(apiURI, name + '/' + id), 'get', undefined, headers)
   },
 
   create (params) {
